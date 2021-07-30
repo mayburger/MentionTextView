@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,15 @@
 		3F2362DE26B2D92C004A0806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F2362DC26B2D92C004A0806 /* LaunchScreen.storyboard */; };
 		3F2362E926B2D92C004A0806 /* MentionTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2362E826B2D92C004A0806 /* MentionTextViewTests.swift */; };
 		3F2362F426B2D92C004A0806 /* MentionTextViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2362F326B2D92C004A0806 /* MentionTextViewUITests.swift */; };
+		3F23630226B2DF5E004A0806 /* HasApply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630126B2DF5E004A0806 /* HasApply.swift */; };
+		3F23630426B2E0D9004A0806 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630326B2E0D9004A0806 /* UIStackView+Extension.swift */; };
+		3F23630826B2E462004A0806 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630726B2E462004A0806 /* String+Extension.swift */; };
+		3F23630C26B2F669004A0806 /* UIView+GestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630B26B2F669004A0806 /* UIView+GestureRecognizer.swift */; };
+		3F23630E26B2F67B004A0806 /* GestureRecognizer+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630D26B2F67B004A0806 /* GestureRecognizer+Helper.swift */; };
+		3F23631026B2F766004A0806 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630F26B2F766004A0806 /* UITextView+Extension.swift */; };
+		5FC3F31EBA6A85107C89BF1A /* Pods_MentionTextView_MentionTextViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F8AB5512B0F22D000F6C64 /* Pods_MentionTextView_MentionTextViewUITests.framework */; };
+		7ECE594F4D173BAF986FBA40 /* Pods_MentionTextViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9E78E6BC8AF778F3519D81 /* Pods_MentionTextViewTests.framework */; };
+		C3FDDF2D45225437E966E816 /* Pods_MentionTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98BFBD84AC7EDF854B31D51A /* Pods_MentionTextView.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2DFB9D73E08037C67812BFC4 /* Pods-MentionTextView-MentionTextViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextView-MentionTextViewUITests.release.xcconfig"; path = "Target Support Files/Pods-MentionTextView-MentionTextViewUITests/Pods-MentionTextView-MentionTextViewUITests.release.xcconfig"; sourceTree = "<group>"; };
 		3F2362CE26B2D92B004A0806 /* MentionTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentionTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2362D126B2D92B004A0806 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2362D326B2D92B004A0806 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,20 @@
 		3F2362EF26B2D92C004A0806 /* MentionTextViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MentionTextViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2362F326B2D92C004A0806 /* MentionTextViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentionTextViewUITests.swift; sourceTree = "<group>"; };
 		3F2362F526B2D92C004A0806 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F23630126B2DF5E004A0806 /* HasApply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HasApply.swift; sourceTree = "<group>"; };
+		3F23630326B2E0D9004A0806 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		3F23630726B2E462004A0806 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3F23630B26B2F669004A0806 /* UIView+GestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GestureRecognizer.swift"; sourceTree = "<group>"; };
+		3F23630D26B2F67B004A0806 /* GestureRecognizer+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GestureRecognizer+Helper.swift"; sourceTree = "<group>"; };
+		3F23630F26B2F766004A0806 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
+		50AE7D99EC8FB10F0A506E25 /* Pods-MentionTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextView.debug.xcconfig"; path = "Target Support Files/Pods-MentionTextView/Pods-MentionTextView.debug.xcconfig"; sourceTree = "<group>"; };
+		6C9E78E6BC8AF778F3519D81 /* Pods_MentionTextViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentionTextViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7963805EC8168D4FE2663DA1 /* Pods-MentionTextViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextViewTests.release.xcconfig"; path = "Target Support Files/Pods-MentionTextViewTests/Pods-MentionTextViewTests.release.xcconfig"; sourceTree = "<group>"; };
+		9056C4AC9DE27E1683A59261 /* Pods-MentionTextViewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextViewTests.debug.xcconfig"; path = "Target Support Files/Pods-MentionTextViewTests/Pods-MentionTextViewTests.debug.xcconfig"; sourceTree = "<group>"; };
+		98BFBD84AC7EDF854B31D51A /* Pods_MentionTextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentionTextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBEA31A353242CB7C97695C3 /* Pods-MentionTextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextView.release.xcconfig"; path = "Target Support Files/Pods-MentionTextView/Pods-MentionTextView.release.xcconfig"; sourceTree = "<group>"; };
+		C0F8AB5512B0F22D000F6C64 /* Pods_MentionTextView_MentionTextViewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentionTextView_MentionTextViewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9DFEFD619A9B3EDD3908E8E /* Pods-MentionTextView-MentionTextViewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextView-MentionTextViewUITests.debug.xcconfig"; path = "Target Support Files/Pods-MentionTextView-MentionTextViewUITests/Pods-MentionTextView-MentionTextViewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3FDDF2D45225437E966E816 /* Pods_MentionTextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECE594F4D173BAF986FBA40 /* Pods_MentionTextViewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FC3F31EBA6A85107C89BF1A /* Pods_MentionTextView_MentionTextViewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,8 @@
 				3F2362E726B2D92C004A0806 /* MentionTextViewTests */,
 				3F2362F226B2D92C004A0806 /* MentionTextViewUITests */,
 				3F2362CF26B2D92B004A0806 /* Products */,
+				70A8E5C9065D2781822DC4C0 /* Pods */,
+				84EA4EA051EB20C2CA7B200D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,10 +131,16 @@
 				3F2362D126B2D92B004A0806 /* AppDelegate.swift */,
 				3F2362D326B2D92B004A0806 /* SceneDelegate.swift */,
 				3F2362D526B2D92B004A0806 /* ViewController.swift */,
+				3F23630F26B2F766004A0806 /* UITextView+Extension.swift */,
 				3F2362D726B2D92B004A0806 /* Main.storyboard */,
 				3F2362DA26B2D92C004A0806 /* Assets.xcassets */,
 				3F2362DC26B2D92C004A0806 /* LaunchScreen.storyboard */,
 				3F2362DF26B2D92C004A0806 /* Info.plist */,
+				3F23630126B2DF5E004A0806 /* HasApply.swift */,
+				3F23630326B2E0D9004A0806 /* UIStackView+Extension.swift */,
+				3F23630726B2E462004A0806 /* String+Extension.swift */,
+				3F23630B26B2F669004A0806 /* UIView+GestureRecognizer.swift */,
+				3F23630D26B2F67B004A0806 /* GestureRecognizer+Helper.swift */,
 			);
 			path = MentionTextView;
 			sourceTree = "<group>";
@@ -128,6 +163,29 @@
 			path = MentionTextViewUITests;
 			sourceTree = "<group>";
 		};
+		70A8E5C9065D2781822DC4C0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				50AE7D99EC8FB10F0A506E25 /* Pods-MentionTextView.debug.xcconfig */,
+				BBEA31A353242CB7C97695C3 /* Pods-MentionTextView.release.xcconfig */,
+				D9DFEFD619A9B3EDD3908E8E /* Pods-MentionTextView-MentionTextViewUITests.debug.xcconfig */,
+				2DFB9D73E08037C67812BFC4 /* Pods-MentionTextView-MentionTextViewUITests.release.xcconfig */,
+				9056C4AC9DE27E1683A59261 /* Pods-MentionTextViewTests.debug.xcconfig */,
+				7963805EC8168D4FE2663DA1 /* Pods-MentionTextViewTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		84EA4EA051EB20C2CA7B200D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				98BFBD84AC7EDF854B31D51A /* Pods_MentionTextView.framework */,
+				C0F8AB5512B0F22D000F6C64 /* Pods_MentionTextView_MentionTextViewUITests.framework */,
+				6C9E78E6BC8AF778F3519D81 /* Pods_MentionTextViewTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F2362F826B2D92C004A0806 /* Build configuration list for PBXNativeTarget "MentionTextView" */;
 			buildPhases = (
+				D3C8ACFE99D4FBC2877B41E0 /* [CP] Check Pods Manifest.lock */,
 				3F2362CA26B2D92B004A0806 /* Sources */,
 				3F2362CB26B2D92B004A0806 /* Frameworks */,
 				3F2362CC26B2D92B004A0806 /* Resources */,
+				74B921B9746A17FDE345BAA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +212,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F2362FB26B2D92C004A0806 /* Build configuration list for PBXNativeTarget "MentionTextViewTests" */;
 			buildPhases = (
+				5E33D7A00A309AF14658D54B /* [CP] Check Pods Manifest.lock */,
 				3F2362E026B2D92C004A0806 /* Sources */,
 				3F2362E126B2D92C004A0806 /* Frameworks */,
 				3F2362E226B2D92C004A0806 /* Resources */,
@@ -170,9 +231,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3F2362FE26B2D92C004A0806 /* Build configuration list for PBXNativeTarget "MentionTextViewUITests" */;
 			buildPhases = (
+				321B490ED743594EA01DD884 /* [CP] Check Pods Manifest.lock */,
 				3F2362EB26B2D92C004A0806 /* Sources */,
 				3F2362EC26B2D92C004A0806 /* Frameworks */,
 				3F2362ED26B2D92C004A0806 /* Resources */,
+				68BE243EDAEC346B96096A30 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +316,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		321B490ED743594EA01DD884 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MentionTextView-MentionTextViewUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E33D7A00A309AF14658D54B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MentionTextViewTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68BE243EDAEC346B96096A30 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MentionTextView-MentionTextViewUITests/Pods-MentionTextView-MentionTextViewUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MentionTextView-MentionTextViewUITests/Pods-MentionTextView-MentionTextViewUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MentionTextView-MentionTextViewUITests/Pods-MentionTextView-MentionTextViewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74B921B9746A17FDE345BAA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MentionTextView/Pods-MentionTextView-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MentionTextView/Pods-MentionTextView-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MentionTextView/Pods-MentionTextView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C8ACFE99D4FBC2877B41E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MentionTextView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3F2362CA26B2D92B004A0806 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -261,6 +427,12 @@
 				3F2362D626B2D92B004A0806 /* ViewController.swift in Sources */,
 				3F2362D226B2D92B004A0806 /* AppDelegate.swift in Sources */,
 				3F2362D426B2D92B004A0806 /* SceneDelegate.swift in Sources */,
+				3F23630E26B2F67B004A0806 /* GestureRecognizer+Helper.swift in Sources */,
+				3F23630C26B2F669004A0806 /* UIView+GestureRecognizer.swift in Sources */,
+				3F23631026B2F766004A0806 /* UITextView+Extension.swift in Sources */,
+				3F23630426B2E0D9004A0806 /* UIStackView+Extension.swift in Sources */,
+				3F23630826B2E462004A0806 /* String+Extension.swift in Sources */,
+				3F23630226B2DF5E004A0806 /* HasApply.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +605,14 @@
 		};
 		3F2362F926B2D92C004A0806 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50AE7D99EC8FB10F0A506E25 /* Pods-MentionTextView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3E3255CM9;
 				INFOPLIST_FILE = MentionTextView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,12 +626,14 @@
 		};
 		3F2362FA26B2D92C004A0806 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBEA31A353242CB7C97695C3 /* Pods-MentionTextView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = E3E3255CM9;
 				INFOPLIST_FILE = MentionTextView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -471,6 +647,7 @@
 		};
 		3F2362FC26B2D92C004A0806 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9056C4AC9DE27E1683A59261 /* Pods-MentionTextViewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -493,6 +670,7 @@
 		};
 		3F2362FD26B2D92C004A0806 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7963805EC8168D4FE2663DA1 /* Pods-MentionTextViewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -515,6 +693,7 @@
 		};
 		3F2362FF26B2D92C004A0806 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9DFEFD619A9B3EDD3908E8E /* Pods-MentionTextView-MentionTextViewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -535,6 +714,7 @@
 		};
 		3F23630026B2D92C004A0806 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DFB9D73E08037C67812BFC4 /* Pods-MentionTextView-MentionTextViewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
