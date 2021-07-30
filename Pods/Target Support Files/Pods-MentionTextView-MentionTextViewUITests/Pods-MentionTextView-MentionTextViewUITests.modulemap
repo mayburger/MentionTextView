@@ -1,0 +1,6 @@
+framework module Pods_MentionTextView_MentionTextViewUITests {
+  umbrella header "Pods-MentionTextView-MentionTextViewUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
