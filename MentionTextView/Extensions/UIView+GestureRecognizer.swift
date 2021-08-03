@@ -143,4 +143,11 @@ extension UITextView{
             }
 
         }
+    
+    func cursorPosition() -> Int {
+        if let selectedRange = selectedTextRange {
+            return offset(from: beginningOfDocument, to: selectedRange.start)
+        }
+        return 0
+    }
 }
