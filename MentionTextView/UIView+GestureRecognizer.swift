@@ -62,6 +62,34 @@ extension UIView {
             handler(gesture as! UIRotationGestureRecognizer)
             })
     }
+    
+    class func nibName() -> String {
+        return "\(self)".components(separatedBy: ".").last ?? ""
+    }
+    
+    class func viewFromXib() -> Self {
+        return typeSafeFromXib()
+    }
+    fileprivate class func typeSafeFromXib<T:UIView>() -> T {
+        if let view: AnyObject = Bundle.main.loadNibNamed(self.nibName(), owner: nil, options: nil)?.first as AnyObject? {
+            if let viewT = view as? T {
+                return viewT
+            } else {
+                return T()
+            }
+        } else {
+            return T()
+        }
+    }
+    
+    class func nib() -> UINib {
+        let nib = UINib(nibName:self.nibName(), bundle: Bundle.main)
+        return nib
+    }
+    
+    class func identifier() -> String {
+        return "\(self)"
+    }
 }
 
 private extension UIView {

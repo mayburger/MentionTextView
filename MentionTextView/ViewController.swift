@@ -26,48 +26,19 @@ class ViewController: UIViewController {
         setAccessoryView()
     }
     
+    let users = ["Ghifari","Alvin","Hafidzh","Aditya", "Steve"]
+    
     func setAccessoryView(){
-        let view = UIStackView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height:150))
-        view.axis = .vertical
-        view.distribution = .fillEqually
-        view.addArrangedSubview(UIView().apply{
-            $0.backgroundColor = .blue
-            $0.onTap{_ in
-                let currentText = self.textView.text.getWordWithoutLastMention()
-                let currentTextSymbol = currentText.toSymbolic() + "@alvin" + " "
-                self.textView.text = currentText + "@alvin" + " "
-                self.ranges.append((currentTextSymbol as NSString).range(of: "@alvin"))
-                self.refreshAttributedString()
-                self.refreshMentionDetection()
-            }
-        })
-        view.addArrangedSubview(UIView().apply{
-            $0.backgroundColor = .green
-            $0.onTap{_ in
-                let currentText = self.textView.text.getWordWithoutLastMention()
-                let currentTextSymbol = currentText.toSymbolic() + "@ghifari" + " "
-                self.textView.text = currentText + "@ghifari" + " "
-                self.ranges.append((currentTextSymbol as NSString).range(of: "@ghifari"))
-                self.refreshAttributedString()
-                self.refreshMentionDetection()
-            }
-        })
-        view.addArrangedSubview(UIView().apply{
-            $0.backgroundColor = .yellow
-            $0.onTap{_ in
-                let currentText = self.textView.text.getWordWithoutLastMention()
-                let currentTextSymbol = currentText.toSymbolic() + "@hafizh" + " "
-                self.textView.text = currentText + "@hafizh" + " "
-                self.ranges.append((currentTextSymbol as NSString).range(of: "@hafizh"))
-                self.refreshAttributedString()
-                self.refreshMentionDetection()
-            }
-        })
-        view.transform = CGAffineTransform.init(translationX: 0, y: view.frame.height)
-        view.alpha = 0
-        view.backgroundColor = .gray
+        let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height:150))
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.separatorStyle = .none
+        tableView.transform = CGAffineTransform.init(translationX: 0, y: tableView.frame.height)
+        tableView.alpha = 0
+        tableView.backgroundColor = .gray
+        tableView.register(UserCell.nib(), forCellReuseIdentifier: UserCell.identifier())
         textView.autocorrectionType = .no
-        textView.inputAccessoryView = view
+        textView.inputAccessoryView = tableView
     }
     
     func refreshAttributedString() {
@@ -111,6 +82,29 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        self.users.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentText = self.textView.text.getWordWithoutLastMention()
+        let user = users[indexPath.row]
+        let currentTextSymbol = currentText.toSymbolic() + "@\(user)" + " "
+        self.textView.text = currentText + "@\(user)" + " "
+        self.ranges.append((currentTextSymbol as NSString).range(of: "@\(user)"))
+        self.refreshAttributedString()
+        self.refreshMentionDetection()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.identifier()) as! UserCell
+        let title = users[indexPath.row]
+        cell.name.text = title
+        return cell
+    }
+}
+
 extension ViewController: UITextViewDelegate{
     func textViewDidChange(_ textView: UITextView) {
         if let text = self.textView.text{
@@ -123,7 +117,6 @@ extension ViewController: UITextViewDelegate{
                     }
                 }
             }
-            
             refreshAttributedString()
             refreshMentionDetection()
         }
