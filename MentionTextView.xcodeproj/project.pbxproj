@@ -23,6 +23,7 @@
 		3F23631026B2F766004A0806 /* UITextView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23630F26B2F766004A0806 /* UITextView+Extension.swift */; };
 		3F82B6AE26B90B6E00B51A8C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B6AC26B90B6E00B51A8C /* UserCell.swift */; };
 		3F82B6AF26B90B6E00B51A8C /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F82B6AD26B90B6E00B51A8C /* UserCell.xib */; };
+		3F82B6B826B961EC00B51A8C /* MentionableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F82B6B726B961EC00B51A8C /* MentionableTextView.swift */; };
 		5FC3F31EBA6A85107C89BF1A /* Pods_MentionTextView_MentionTextViewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F8AB5512B0F22D000F6C64 /* Pods_MentionTextView_MentionTextViewUITests.framework */; };
 		7ECE594F4D173BAF986FBA40 /* Pods_MentionTextViewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9E78E6BC8AF778F3519D81 /* Pods_MentionTextViewTests.framework */; };
 		C3FDDF2D45225437E966E816 /* Pods_MentionTextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98BFBD84AC7EDF854B31D51A /* Pods_MentionTextView.framework */; };
@@ -69,6 +70,7 @@
 		3F23630F26B2F766004A0806 /* UITextView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extension.swift"; sourceTree = "<group>"; };
 		3F82B6AC26B90B6E00B51A8C /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		3F82B6AD26B90B6E00B51A8C /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		3F82B6B726B961EC00B51A8C /* MentionableTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MentionableTextView.swift; path = ../../../../.Trash/MentionableTextView.swift; sourceTree = "<group>"; };
 		50AE7D99EC8FB10F0A506E25 /* Pods-MentionTextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextView.debug.xcconfig"; path = "Target Support Files/Pods-MentionTextView/Pods-MentionTextView.debug.xcconfig"; sourceTree = "<group>"; };
 		6C9E78E6BC8AF778F3519D81 /* Pods_MentionTextViewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MentionTextViewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7963805EC8168D4FE2663DA1 /* Pods-MentionTextViewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextViewTests.release.xcconfig"; path = "Target Support Files/Pods-MentionTextViewTests/Pods-MentionTextViewTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				3F2362DF26B2D92C004A0806 /* Info.plist */,
 				3F23630126B2DF5E004A0806 /* HasApply.swift */,
 				3F23630326B2E0D9004A0806 /* UIStackView+Extension.swift */,
+				3F82B6B726B961EC00B51A8C /* MentionableTextView.swift */,
 				3F23630726B2E462004A0806 /* String+Extension.swift */,
 				3F23630B26B2F669004A0806 /* UIView+GestureRecognizer.swift */,
 				3F82B6AC26B90B6E00B51A8C /* UserCell.swift */,
@@ -437,6 +440,7 @@
 				3F23630E26B2F67B004A0806 /* GestureRecognizer+Helper.swift in Sources */,
 				3F23630C26B2F669004A0806 /* UIView+GestureRecognizer.swift in Sources */,
 				3F23631026B2F766004A0806 /* UITextView+Extension.swift in Sources */,
+				3F82B6B826B961EC00B51A8C /* MentionableTextView.swift in Sources */,
 				3F23630426B2E0D9004A0806 /* UIStackView+Extension.swift in Sources */,
 				3F23630826B2E462004A0806 /* String+Extension.swift in Sources */,
 				3F82B6AE26B90B6E00B51A8C /* UserCell.swift in Sources */,
