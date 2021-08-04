@@ -41,6 +41,11 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         (inputAccessoryView as! UITableView).reloadData()
     }
     
+    func setCallback(onUserQuery:@escaping ((String)->()), onUserSelected:@escaping (([String])->())) {
+        self.onUserQuery = onUserQuery
+        self.onUserSelected = onUserSelected
+    }
+    
     var query = ""
     
     func refreshMentionDetection() {
@@ -49,6 +54,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
                 if text[..<cursorPosition()].split(separator: " ").last?.first == "@" && !isAttributedTextAtPositionAnImage() && ((cursorPosition() - 1 != -1) && text[cursorPosition() - 1] != " "){
                     
                     query = String(text[..<cursorPosition()].split(separator: " ").last ?? "")
+                    onUserQuery!((query as NSString).replacingOccurrences(of: "@", with: ""))
                     
                     UIView.animate(withDuration: 0.2){
                         accessoryView.transform = CGAffineTransform.init(translationX: 0, y: 0)
@@ -96,6 +102,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         attributedText.deleteCharacters(in: NSMakeRange(cursorPosition()-query.count, query.count))
         
         mentions[user] = image?.pngData()?.base64EncodedString(options: .lineLength64Characters)
+        onUserSelected!(mentions.map{$0.key})
         
         preserveCursorPosition(withChanges: { _ in
             self.attributedText = attributedText
@@ -135,6 +142,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
             }
             if !containsImage{
                 mentions.removeValue(forKey: mention.key)
+                onUserSelected!(mentions.map{$0.key})
             }
         }
         

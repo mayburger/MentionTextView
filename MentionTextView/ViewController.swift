@@ -18,8 +18,12 @@ class ViewController: UIViewController {
         textView.layer.borderColor = UIColor.gray.cgColor
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 4
+        textView.setCallback(onUserQuery: {query in
+            print("\(query)")
+        }, onUserSelected: { users in
+            print("These are the users \(users)")
+        })
         
-        print("Hello @everyone this is not me"[..<12].split(separator: " ").last?.first == "@")
 
     }
     
