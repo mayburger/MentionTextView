@@ -8,8 +8,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, MentionableTextViewDelegate{
     
     @IBOutlet weak var textView: MentionableTextView!
     override func viewDidLoad() {
@@ -18,15 +17,18 @@ class ViewController: UIViewController {
         textView.layer.borderColor = UIColor.gray.cgColor
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 4
-        textView.users = ["Ghifari", "Adit", "Reydi", "Alvin"]
+        textView.users = ["Muhammad", "Ghifari", "Yusuf"]
         textView.reloadTableView()
-        textView.setCallback(onUserQuery: {query in
-            print("\(query)")
-        }, onUserSelected: { users in
-            print("These are the users \(users)")
-        })
-        
+        textView.mentionableDelegate = self
 
+    }
+    
+    func didUserSelected(_ users: [String]) {
+        print("These are the users \(users)")
+    }
+    
+    func didUserQuery(_ query: String) {
+        print(query)
     }
     
 }
