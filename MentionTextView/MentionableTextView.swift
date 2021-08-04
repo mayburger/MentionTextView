@@ -28,7 +28,6 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height:150))
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.separatorStyle = .none
         tableView.transform = CGAffineTransform.init(translationX: 0, y: tableView.frame.height)
         tableView.alpha = 0
         tableView.backgroundColor = .gray
@@ -39,6 +38,8 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
     
     func reloadTableView(){
         (inputAccessoryView as! UITableView).reloadData()
+        (inputAccessoryView as! UITableView).separatorStyle = .none
+        (inputAccessoryView as! UITableView).pin.height(users.count < 3 ? CGFloat(50 * users.count) : 150)
     }
     
     func setCallback(onUserQuery:@escaping ((String)->()), onUserSelected:@escaping (([String])->())) {
@@ -115,6 +116,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.identifier()) as! UserCell
         let title = users[indexPath.row]
         cell.name.text = title
+        cell.backgroundColor = .gray
         return cell
     }
 

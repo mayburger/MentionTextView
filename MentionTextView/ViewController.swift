@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         textView.layer.borderColor = UIColor.gray.cgColor
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 4
+        textView.users = ["Ghifari", "Adit", "Reydi", "Alvin"]
+        textView.reloadTableView()
         textView.setCallback(onUserQuery: {query in
             print("\(query)")
         }, onUserSelected: { users in
