@@ -48,7 +48,6 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
             if let text = text{
                 if text[..<cursorPosition()].split(separator: " ").last?.first == "@" && !isAttributedTextAtPositionAnImage() && ((cursorPosition() - 1 != -1) && text[cursorPosition() - 1] != " "){
                     
-                    
                     query = String(text[..<cursorPosition()].split(separator: " ").last ?? "")
                     
                     UIView.animate(withDuration: 0.2){

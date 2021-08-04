@@ -36,7 +36,7 @@ extension String{
          nameLabel.textColor = .blue
          nameLabel.font = UIFont.systemFont(ofSize: 16)
          nameLabel.text = name
-         UIGraphicsBeginImageContext(frame.size)
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, 0.0)
           if let currentContext = UIGraphicsGetCurrentContext() {
              nameLabel.layer.render(in: currentContext)
              let nameImage = UIGraphicsGetImageFromCurrentImageContext()
