@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         textView.layer.borderColor = UIColor.gray.cgColor
         textView.layer.borderWidth = 1
         textView.layer.cornerRadius = 4
+        
+        print("Hello @everyone this is not me"[..<12].split(separator: " ").last?.first == "@")
 
     }
     

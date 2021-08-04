@@ -13,7 +13,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
 
     
     var users:[String] = ["Ghifari", "Alvin", "Adit", "Reydi"]
-    var ranges = Dictionary<String,UIImageView>()
+    var mentions = Dictionary<String,String>()
     
     var onUserQuery:((String)->())?
     var onUserSelected:(([String])->())?
@@ -41,10 +41,16 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         (inputAccessoryView as! UITableView).reloadData()
     }
     
+    var query = ""
+    
     func refreshMentionDetection() {
         if let accessoryView = inputAccessoryView{
             if let text = text{
-                if text.count != 0 && text.count >= cursorPosition()-1 && text[cursorPosition()-1] == "@" {
+                if text[..<cursorPosition()].split(separator: " ").last?.first == "@" && !isAttributedTextAtPositionAnImage() && ((cursorPosition() - 1 != -1) && text[cursorPosition() - 1] != " "){
+                    
+                    
+                    query = String(text[..<cursorPosition()].split(separator: " ").last ?? "")
+                    
                     UIView.animate(withDuration: 0.2){
                         accessoryView.transform = CGAffineTransform.init(translationX: 0, y: 0)
                         accessoryView.alpha = 1
@@ -59,6 +65,20 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    func isAttributedTextAtPositionAnImage() -> Bool {
+        var isHasImage = false
+        if cursorPosition() - 1 != -1 {
+            let range = NSMakeRange(cursorPosition()-1, 1)
+            attributedText.enumerateAttributes(in: range, options: NSAttributedString.EnumerationOptions(rawValue: 0))
+                { (object, range, stop) in
+                if object.keys.contains(NSAttributedString.Key.attachment){
+                    isHasImage = true
+                }
+            }
+        }
+        return isHasImage
+    }
+    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         self.users.count
@@ -68,9 +88,16 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         let user = users[indexPath.row]
         let attributedText = NSMutableAttributedString(attributedString: self.attributedText)
         attributedText.addAttributes([NSAttributedString.Key.font:UIFont.systemFont(ofSize: 16)], range: NSRange(location: 0, length: attributedText.length))
+        let image = user.toImage()
+        
         attributedText.insert(NSAttributedString(attachment: NSTextAttachment().apply{
             $0.image = user.toImage()
         }), at: cursorPosition())
+        
+        attributedText.deleteCharacters(in: NSMakeRange(cursorPosition()-query.count, query.count))
+        
+        mentions[user] = image?.pngData()?.base64EncodedString(options: .lineLength64Characters)
+        
         preserveCursorPosition(withChanges: { _ in
             self.attributedText = attributedText
             return .incrementCursor
@@ -97,6 +124,20 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
             self.attributedText = mutated
             return .preserveCursor
         })
+        
+        mentions.forEach{ mention in
+            var containsImage = false
+            getParts().forEach{ part in
+                if let image = part as? UIImage{
+                    if mention.value == image.pngData()?.base64EncodedString(options: .lineLength64Characters){
+                        containsImage = true
+                    }
+                }
+            }
+            if !containsImage{
+                mentions.removeValue(forKey: mention.key)
+            }
+        }
         
         refreshMentionDetection()
     }

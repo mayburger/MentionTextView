@@ -29,8 +29,8 @@ extension String{
     
     func toImage() -> UIImage? {
         let name = self
-        let width = (name.width(withConstrainedHeight: 12.5, font: UIFont.systemFont(ofSize: 16)))
-        let frame = CGRect(x: 0, y: 0, width: width, height: 12.5)
+        let width = (name.width(withConstrainedHeight: 14, font: UIFont.systemFont(ofSize: 16)))
+        let frame = CGRect(x: 0, y: 0, width: width, height: 14)
          let nameLabel = UILabel(frame: frame)
          nameLabel.textAlignment = .center
          nameLabel.textColor = .blue
