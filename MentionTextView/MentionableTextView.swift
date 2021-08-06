@@ -17,8 +17,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
     
     var mentionableDelegate: MentionableTextViewDelegate?
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    func initialize()  {
         delegate = self
         configureAccessoryView()
     }
@@ -51,12 +50,12 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
                     query = String(text[..<cursorPosition()].split(separator: " ").last ?? "")
                     mentionableDelegate?.didUserQuery((query as NSString).replacingOccurrences(of: "@", with: ""))
                     
-                    UIView.animate(withDuration: 0.2){
-                        accessoryView.transform = CGAffineTransform.init(translationX: 0, y: 0)
+                    UIView.animate(withDuration: 0){
+                        accessoryView.transform = CGAffineTransform.init(translationX: 0, y: -56)
                         accessoryView.alpha = 1
                     }
                 } else{
-                    UIView.animate(withDuration: 0.2){
+                    UIView.animate(withDuration: 0){
                         accessoryView.transform = CGAffineTransform.init(translationX: 0, y: accessoryView.frame.height)
                         accessoryView.alpha = 0
                     }
@@ -110,7 +109,7 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         let cell = tableView.dequeueReusableCell(withIdentifier: UserCell.identifier()) as! UserCell
         let title = users[indexPath.row]
         cell.name.text = title
-        cell.backgroundColor = .gray
+        cell.backgroundColor = .clear
         return cell
     }
 
@@ -143,6 +142,8 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
         }
         
         refreshMentionDetection()
+        
+        mentionableDelegate?.textViewDidChange(textView)
     }
     
 }
@@ -150,4 +151,5 @@ class MentionableTextView: UITextView, UITableViewDelegate, UITableViewDataSourc
 protocol MentionableTextViewDelegate {
     func didUserSelected(_ users:[String])
     func didUserQuery(_ query:String)
+    func textViewDidChange(_ textView:UITextView)
 }

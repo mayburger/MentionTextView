@@ -6,29 +6,44 @@
 //
 
 import UIKit
-
+import PinLayout
 
 class ViewController: UIViewController, MentionableTextViewDelegate{
     
-    @IBOutlet weak var textView: MentionableTextView!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        textView.layer.borderColor = UIColor.gray.cgColor
-        textView.layer.borderWidth = 1
-        textView.layer.cornerRadius = 4
-        textView.users = ["Muhammad", "Ghifari", "Yusuf"]
-        textView.reloadTableView()
-        textView.mentionableDelegate = self
+//    fileprivate lazy var textView: MentionableTextView={
+//        let view = MentionableTextView()
+//        view.initialize()
+//        view.backgroundColor = .gray
+//        return view
+//    }()
+    
+    fileprivate lazy var commentView:CommentView={
+        let view = CommentView()
+        return view
+    }()
 
+    
+    override func viewDidLoad() {
+        configureViews()
+        view.onTap { UITapGestureRecognizer in
+            self.commentView.endEditing(true)
+        }
+    }
+    
+    func configureViews() {
+        view.addSubview(commentView)
     }
     
     func didUserSelected(_ users: [String]) {
-        print("These are the users \(users)")
+        
     }
     
     func didUserQuery(_ query: String) {
-        print(query)
+
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        
     }
     
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F213F5626BD77CD000DDC3E /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F213F5526BD77CC000DDC3E /* CommentView.swift */; };
 		3F2362D226B2D92B004A0806 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2362D126B2D92B004A0806 /* AppDelegate.swift */; };
 		3F2362D426B2D92B004A0806 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2362D326B2D92B004A0806 /* SceneDelegate.swift */; };
 		3F2362D626B2D92B004A0806 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2362D526B2D92B004A0806 /* ViewController.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		2DFB9D73E08037C67812BFC4 /* Pods-MentionTextView-MentionTextViewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MentionTextView-MentionTextViewUITests.release.xcconfig"; path = "Target Support Files/Pods-MentionTextView-MentionTextViewUITests/Pods-MentionTextView-MentionTextViewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3F213F5526BD77CC000DDC3E /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		3F2362CE26B2D92B004A0806 /* MentionTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentionTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2362D126B2D92B004A0806 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F2362D326B2D92B004A0806 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				3F82B6AD26B90B6E00B51A8C /* UserCell.xib */,
 				3F82B6B926B96BFC00B51A8C /* MentionableTextView.swift */,
 				3F82B6BB26B96DCC00B51A8C /* Extensions */,
+				3F213F5526BD77CC000DDC3E /* CommentView.swift */,
 			);
 			path = MentionTextView;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F2362D626B2D92B004A0806 /* ViewController.swift in Sources */,
+				3F213F5626BD77CD000DDC3E /* CommentView.swift in Sources */,
 				3F2362D226B2D92B004A0806 /* AppDelegate.swift in Sources */,
 				3F2362D426B2D92B004A0806 /* SceneDelegate.swift in Sources */,
 				3F23630E26B2F67B004A0806 /* GestureRecognizer+Helper.swift in Sources */,
